@@ -16,6 +16,11 @@
       //print_r($this->getUrl());
 
       $url = $this->getUrl();
+
+      //to protect warning of offset when we read null from $url
+      if(!is_array($url)){
+        $url = [""];
+      }
       
       // Look in controllers for first value
       if(file_exists('./src/controllers/' . ucwords($url[0]). '.php')){

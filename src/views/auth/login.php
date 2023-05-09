@@ -6,7 +6,7 @@
       <?php flash('register_success'); ?>
       <h2>Login</h2>
       <p>Please fill in your login credentials</p>
-      <form action="<?php echo URLROOT; ?>/users/login" method="POST">
+      <form action="<?php echo URLROOT; ?>/users/login" method="POST" id="loginForm">
         <!-- Email -->
         <div class="form-group">
           <label for="email">Email: <sup>*</sup></label>
@@ -26,7 +26,7 @@
 
         <div class="row">
           <div class="col">
-            <input type="submit" value="Login" class="btn btn-success btn-block">
+            <input type="submit" value="Login" class="btn btn-success btn-block" name="loginBtn">
           </div>
           <div class="col">
             <a href="<?php echo URLROOT; ?>/users/register" class="btn btn-light btn-block">

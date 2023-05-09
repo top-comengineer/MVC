@@ -1,4 +1,5 @@
 <?php
+//TODO Should change User controller
     class Users extends Controller {
         public function __construct() {
             $this->userModel = $this->model('User');
@@ -174,7 +175,6 @@
 
                 // Load the view
                 $this->view('auth/login', $data);
-
             }
 
         }
