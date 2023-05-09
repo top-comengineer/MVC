@@ -1,110 +1,95 @@
 body {
-    background-color: #000;
+  background: -webkit-linear-gradient(left, #3931af, #00c6ff);
 }
-/*--------------------------------Login---------------------------------------*/
-#formLogin {
-    width: 340px;
-    height: auto;
-    background-color: #DDD;
-    margin: auto;
-    margin-top: 60px;
-    padding: 20px;
-    border-radius: 10px;
+.emp-profile {
+  padding: 3%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  border-radius: 0.5rem;
+  background: #fff;
 }
-input {
-    width: 300px;
-    padding: 15px;
-    font-size: 14px;
+.profile-img {
+  text-align: center;
 }
-.btFazerLogin {
-    font-size: 18px;
-    margin-top: 10px;
+.profile-img img {
+  width: 70%;
+  height: 100%;
 }
-.btCadastrar {
-    font-size: 16px;
-    margin-top: 10px;
+.profile-img .file {
+  position: relative;
+  overflow: hidden;
+  margin-top: -20%;
+  width: 70%;
+  border: none;
+  border-radius: 0;
+  font-size: 15px;
+  background: #212529b8;
 }
-.btCadTam input {
-    width: 98%;
+.profile-img .file input {
+  position: absolute;
+  opacity: 0;
+  right: 0;
+  top: 0;
 }
-.warning {
-    border: 2px solid #FF0000;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #FF9999;
-    color: #FFF;
-    margin-top: 20px;
-    margin-bottom: 20px;
+.profile-head h5 {
+  color: #333;
 }
-/*---------------------------------Main---------------------------------------*/
-.img {
-    width: 100%;
-    max-width: 800px;
-    margin: auto;
-    padding-top: 40px;
+.profile-head h6 {
+  color: #0062cc;
 }
-/*---------------------------------Crud---------------------------------------*/
-.tabelaCrud h2 {
-    padding: 20px;
-    padding-top: 40px;
-    padding-bottom: 1px;
-    margin-top: 120px;
+.profile-edit-btn {
+  border: none;
+  border-radius: 1.5rem;
+  width: 70%;
+  padding: 2%;
+  font-weight: 600;
+  color: #6c757d;
+  cursor: pointer;
 }
-header, section, footer {
-    padding-left: 20px;
-    padding-right: 20px;
-    max-width: 1200px;
-    background-color: #000;
-    margin: auto;
+.proile-rating {
+  font-size: 12px;
+  color: #818182;
+  margin-top: 5%;
 }
-header, footer {
-    height: 100px;
-    text-align: center;
+.proile-rating span {
+  color: #495057;
+  font-size: 15px;
+  font-weight: 600;
 }
-header h1 {
-    height: 100px;
-    line-height: 100px;
+.profile-head .nav-tabs {
+  margin-bottom: 5%;
 }
-#btAdd {
-    margin-left: 20px;
+.profile-head .nav-tabs .nav-link {
+  font-weight: 600;
+  border: none;
 }
-.table-bordered {
-    font-size: 16px;
-    font-weight: bold;
+.profile-head .nav-tabs .nav-link.active {
+  border: none;
+  border-bottom: 2px solid #0062cc;
 }
-.table-bordered th {
-    text-align: center;
+.profile-work {
+  padding: 14%;
+  margin-top: -15%;
 }
-.table-bordered tr {
-    text-align: center;
+.profile-work p {
+  font-size: 12px;
+  color: #818182;
+  font-weight: 600;
+  margin-top: 10%;
 }
-.bt_editar {
-    padding-bottom: 10px;
+.profile-work a {
+  text-decoration: none;
+  color: #495057;
+  font-weight: 600;
+  font-size: 14px;
 }
-/*-------------------------------BotaoSair------------------------------------*/
-.btSair {
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    padding-left: 20px;
+.profile-work ul {
+  list-style: none;
 }
-/*-------------------------------ModalAdicionar-------------------------------*/
-.modal_estrut {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 99;
-    background-color: rgba(0, 0, 0, 0.6);
+.profile-tab label {
+  font-weight: 600;
 }
-.modal {
-    position: absolute;
-    width: 600px;
-    height: 550px;
-    background-color: #DDD;
-    z-index: 100;
-    top: 50px;
-    left: 50%;
-    margin-left: -300px;
+.profile-tab p {
+  font-weight: 600;
+  color: #0062cc;
 }
