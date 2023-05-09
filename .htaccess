@@ -1,50 +1,7 @@
-#
-
-# Server config
-
-#
-
-# @package MVC
-
-# @link https://github.com/top-comengineer/mvc-php/.htaccess
-
-#
-
-# Default charset.
-
-AddDefaultCharset UTF-8
-
-# Default index page.
-
-DirectoryIndex index.php
-
-# Default language
-
-DefaultLanguage en-US
-
-# Server admin email
-
-SetEnv SERVER_ADMIN farzad.admin@admin.com
-
-# Don't show directory listings for URLs which map to a directory.
-
-Options -Indexes
-
-# Rewriting all of requests to endpoint /index.php
-
-RewriteEngine on
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.\*)$ index.php/$1 [L]
-
-<IfModule mod_mime.c>
-    AddType application/x-font-ttf ttc ttf
-    AddType font/opentype otf
-    AddType font/woff woff
-    AddType font/woff2 woff2
-</IfModule>
-<IfModule mod_headers.c>
-    <FilesMatch "\.(eot|font.css|otf|ttc|ttf|woff|woff2|php)$">
-        Header set Access-Control-Allow-Origin "*"
-    </FilesMatch>
+<IfModule mod_rewrite.c>
+  Options -Multiviews
+  RewriteEngine On
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule  ^(.+)$ index.php?url=$1 [QSA,L]
 </IfModule>

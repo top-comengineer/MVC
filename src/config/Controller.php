@@ -1,18 +1,26 @@
 <?php
+  /*
+   * Base Controller
+   * Loads the models and views
+   */
+  class Controller {
+    // Load model
+    public function model($model){
+      // Require model file
+      require_once './src/models/' . $model . '.php';
 
-namespace app\config;
-
-class Controller
-{
-
-    public string $layout = 'app';
-    
-    public function setLayout($layout)
-    {
-        $this->layout = $layout;
+      // Instatiate model
+      return new $model();
     }
-    public function render($view, $vars = [])
-    {
-        return Application::$app->router->renderContent($view, $vars);
+
+    // Load view
+    public function view($view, $data = []){
+      // Check for view file
+      if(file_exists('./src/views/' . $view . '.php')){
+        require_once './src/views/' . $view . '.php';
+      } else {
+        // View does not exist
+        die('View does not exist');
+      }
     }
-}
+  }
